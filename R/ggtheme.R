@@ -59,14 +59,14 @@
 #'
 #' @export
 #' @import ggplot2
-theme_naglr <- function(base_family="Roboto Condensed", base_size = 11,
+theme_naglr <- function(base_family="sans", base_size = 11,
                         plot_title_family=base_family, plot_title_size = 18,
                         plot_title_face="bold", plot_title_margin = 10,
-                        subtitle_family="Roboto Condensed Light", subtitle_size = 12,
+                        subtitle_family="sans", subtitle_size = 12,
                         subtitle_face = "plain", subtitle_margin = 15,
                         strip_text_family = base_family, strip_text_size = 12,
                         strip_text_face = "plain",
-                        caption_family = "Roboto Condensed Light", caption_size = 9,
+                        caption_family = "sans", caption_size = 9,
                         caption_face = "plain", caption_margin = 10,
                         axis_title_family = base_family, axis_title_size = 9,
                         axis_title_face = "plain", axis_title_just = "rt",
@@ -128,15 +128,15 @@ theme_naglr <- function(base_family="Roboto Condensed", base_size = 11,
         ret <- ret + theme(axis.ticks.length = grid::unit(5, "pt"))
     }
 
-    xj <- switch(tolower(substr(axis_title_just, 1, 1)), b=0, l=0, m=0.5, c=0.5, r=1, t=1)
-    yj <- switch(tolower(substr(axis_title_just, 2, 2)), b=0, l=0, m=0.5, c=0.5, r=1, t=1)
+    # xj <- switch(tolower(substr(axis_title_just, 1, 1)), b=0, l=0, m=0.5, c=0.5, r=1, t=1)
+    # yj <- switch(tolower(substr(axis_title_just, 2, 2)), b=0, l=0, m=0.5, c=0.5, r=1, t=1)
 
     ret <- ret + theme(axis.text.x=element_text(margin=margin(t=0)))
     ret <- ret + theme(axis.text.y=element_text(margin=margin(r=0)))
     ret <- ret + theme(axis.title=element_text(size=axis_title_size, family=axis_title_family))
-    ret <- ret + theme(axis.title.x=element_text(hjust=xj, size=axis_title_size,
+    ret <- ret + theme(axis.title.x=element_text(size=axis_title_size,
                                                  family=axis_title_family, face=axis_title_face))
-    ret <- ret + theme(axis.title.y=element_text(hjust=yj, size=axis_title_size,
+    ret <- ret + theme(axis.title.y=element_text(size=axis_title_size,
                                                  family=axis_title_family, face=axis_title_face))
     ret <- ret + theme(strip.text=element_text(hjust=0, size=strip_text_size,
                                                face=strip_text_face, family=strip_text_family))
