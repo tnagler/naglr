@@ -70,7 +70,7 @@ theme_naglr <- function(base_family="sans", base_size = 11,
                         caption_face = "plain", caption_margin = 10,
                         axis_title_family = base_family, axis_title_size = 9,
                         axis_title_face = "plain", axis_title_just = "rt",
-                        plot_margin = margin(30, 30, 30, 30),
+                        plot_margin = margin(1, 1, 1, 1),
                         grid = TRUE, axis = FALSE, ticks = FALSE) {
 
     ret <- ggplot2::theme_minimal(base_family=base_family, base_size=base_size)
