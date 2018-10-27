@@ -10,14 +10,14 @@ n_red    <- rgb(206, 15, 105, maxColorValue = 255)
 n_brown  <- rgb(139, 69, 19, maxColorValue = 255)
 
 naglr_palette <- c(
+    n_gray,
     n_lblue,
     n_green,
     n_orange,
     n_purple,
     n_yellow,
     n_red,
-    n_brown,
-    n_gray
+    n_brown
 )
 
 #' A qualitative color palette
