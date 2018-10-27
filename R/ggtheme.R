@@ -60,16 +60,17 @@
 #' @export
 #' @import ggplot2
 theme_naglr <- function(base_family="sans", base_size = 11,
-                        plot_title_family=base_family, plot_title_size = 18,
-                        plot_title_face="bold", plot_title_margin = 10,
+                        plot_title_family=base_family, plot_title_size = 16,
+                        plot_title_face="plain", plot_title_margin = 10,
                         subtitle_family="sans", subtitle_size = 12,
-                        subtitle_face = "plain", subtitle_margin = 15,
+                        subtitle_face = "plain", subtitle_margin = 10,
                         strip_text_family = base_family, strip_text_size = 12,
                         strip_text_face = "plain",
                         caption_family = "sans", caption_size = 9,
                         caption_face = "plain", caption_margin = 10,
                         axis_title_family = base_family, axis_title_size = 9,
                         axis_title_face = "plain", axis_title_just = "rt",
+                        legend_position = "bottom",
                         plot_margin = margin(1, 1, 1, 1),
                         grid = TRUE, axis = FALSE, ticks = FALSE) {
 
@@ -152,6 +153,8 @@ theme_naglr <- function(base_family="sans", base_size = 11,
                                                  margin=margin(t=caption_margin),
                                                  family=caption_family, face=caption_face))
     ret <- ret + theme(plot.margin=plot_margin)
+    ret <- ret + theme(legend.position=legend_position)
+    ret <- ret + theme(legend.margin=margin(1, 1, 1, 1))
 
     ret
 }
