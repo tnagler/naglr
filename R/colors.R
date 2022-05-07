@@ -2,8 +2,8 @@
 n_gray   <- rgb(88, 88, 90, maxColorValue = 255)
 n_blue   <- rgb(0, 17, 88, maxColorValue = 255)
 n_lblue  <- rgb(92,177,235, maxColorValue = 255)
-n_green  <- rgb(44,113,45, maxColorValue = 255)
-n_orange <- rgb(244, 110, 15, maxColorValue = 255)
+n_green  <- rgb(0,136,58, maxColorValue = 255)
+n_orange <- rgb(241, 135, 0, maxColorValue = 255)
 n_purple <- rgb(176, 32, 121, maxColorValue = 255)
 n_turquoise <- rgb(52, 163, 169, maxColorValue = 255)
 n_red    <- rgb(190,25,8, maxColorValue = 255)
@@ -11,8 +11,8 @@ n_brown  <- rgb(139, 69, 19, maxColorValue = 255)
 
 naglr_palette <- c(
     n_gray,
-    n_blue,
     n_green,
+    n_blue,
     n_orange,
     n_purple,
     n_turquoise,
